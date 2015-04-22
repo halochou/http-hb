@@ -2,7 +2,7 @@
 
 res=`curl https://raw.githubusercontent.com/halochou/http-hb/master/hb_src.txt 2> /dev/null`
 
-while [ $res == "online" ]
+while [ $res != "offline" ]
 do
   res=`curl https://raw.githubusercontent.com/halochou/http-hb/master/hb_src.txt 2> /dev/null`
   sleep 300

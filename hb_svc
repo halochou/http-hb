@@ -1,0 +1,10 @@
+#!/bin/bash
+
+res=`curl https://raw.githubusercontent.com/halochou/http-hb/master/hb_src.txt 2> /dev/null`
+
+while [ $res == "online" ]
+do
+  res=`curl https://raw.githubusercontent.com/halochou/http-hb/master/hb_src.txt 2> /dev/null`
+  sleep 300
+done
+poweroff
